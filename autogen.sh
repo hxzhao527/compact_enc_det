@@ -67,7 +67,7 @@ fi
 (cd gtest && cmake . && make)
 
 # Build the main package
-cmake . && make
+cmake -DCMAKE_EXPORT_COMPILE_COMMANDS=ON -DCMAKE_CXX_COMPILER_ID=Clang . && make
 
 set -ex
 
